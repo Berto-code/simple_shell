@@ -1,4 +1,4 @@
-#include <SHELL_H>
+#include <shell.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
