@@ -122,11 +122,11 @@ void is_current_path(char *path, general_t *info)
 void get_full_env(void)
 {
 	char **temp = environ;
-	int i;
+	int g;
 
-	for (i = 0; temp[i] != NULL; i++)
+	for (g = 0; temp[g] != NULL; g++)
 	{
-		print(temp[i]);
+		print(temp[g]);
 		_putchar('\n');
 	}
 }
