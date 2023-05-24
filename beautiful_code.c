@@ -1,29 +1,23 @@
 #include <stdio.h>
 
-#define MAX_VALUE 100
+/**
+ * main - Entry point
+ *
+ * Description: prints hello and your number
+ *
+ */
 
-typedef
+void main(void)
 {
-	int x;
-	int y;
-} Point;
+	int number;
+	char name[256];
 
-void print_point(Point p);
+	printf("What is your name? ");
+	fgets(name, 256, stdin);
+	printf("What is your number? ");
+	scanf("%d", &number);
 
-int main(void)
-{
-	Point p;
 
-	p.x = 5;
-	p.y = 10;
-
-	print_point(p);
-
-	return (0);
-}
-
-void print_point(Point p)
-{
-	printf("Point coordinates: (%d, %d)\n", p.x, p.y);
+	printf("Hello, %s! Your number is %d.\n", name, number);
 }
 
