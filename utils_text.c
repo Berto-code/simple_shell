@@ -9,12 +9,12 @@
  **/
 int _strlen(char *msg)
 {
-	int g;
+	int i;
 
-	for (g = 0; msg[g] != '\0'; g++)
+	for (i = 0; msg[i] != '\0'; i++)
 		;
 
-	return (g);
+	return (i);
 }
 
 /**
@@ -27,12 +27,12 @@ int _strlen(char *msg)
  */
 char *_strcat(char *dest, char *src)
 {
-	int l_dest, g;
+	int l_dest, i;
 
 	l_dest = _strlen(dest);
 
-	for (g = 0; src[g] != '\0'; g++, l_dest++)
-		dest[l_dest] = src[g];
+	for (i = 0; src[i] != '\0'; i++, l_dest++)
+		dest[l_dest] = src[i];
 
 	dest[l_dest] = '\0';
 
@@ -49,12 +49,12 @@ char *_strcat(char *dest, char *src)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int g;
+	int i;
 
-	for (g = 0; src[g] != '\0'; g++)
-		dest[g] = src[g];
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
 
-	dest[g] = '\0';
+	dest[i] = '\0';
 
 	return (dest);
 }
@@ -69,7 +69,7 @@ char *_strcpy(char *dest, char *src)
  **/
 char *_strdup(char *str)
 {
-	int size, g;
+	int size, i;
 	char *dest;
 
 	if (str == NULL)
@@ -80,10 +80,10 @@ char *_strdup(char *str)
 	if (dest == NULL)
 		return (NULL);
 
-	for (g = 0; g < size; g++)
-		*(dest + g) = *(str + g);
+	for (i = 0; i < size; i++)
+		*(dest + i) = *(str + i);
 
-	/* (dest + g) = 0; */
+	/* (dest + i) = 0; */
 
 	return (dest);
 }
@@ -98,12 +98,12 @@ char *_strdup(char *str)
  */
 int _strcmp(char *s1, char *s2)
 {
-	int g;
+	int i;
 
-	for (g = 0; s1[g] != '\0'; g++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		if (s1[g] != s2[g])
-			return (s1[g] - s2[g]);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 	}
 
 	return (0);

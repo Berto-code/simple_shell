@@ -4,7 +4,7 @@
  * Description: Free all the memory used and
  * exit with the last status_code
  *
- * @info: Info about the shell
+ * @info: Information about the shell
  * @arguments: Arguments received
  **/
 void bin_exit(general_t *info, char **arguments)

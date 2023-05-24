@@ -1,13 +1,13 @@
 #include "shell.h"
 /**
- * _putchar_to_fd - Prints a character to a specific file
+ * _putchar_to_fd - Print a character to a specific file
  * descriptor
  *
  * @c: Character to print
- * @fd: Place character is printed
+ * @fd: Place to print the character
  *
  * Return: On success 1.
- * On error -1, and error is set appropriately.
+ * On error, -1 is returned, and errno is set appropriately.
  **/
 int _putchar_to_fd(char c, int fd)
 {
@@ -16,13 +16,13 @@ int _putchar_to_fd(char c, int fd)
 
 
 /**
- * print_to_fd - Prints a string
+ * print_to_fd - Print a string
  *
- * @msg: String to print in the fd specified
+ * @msg: Strin to print in the fd specified
  * @fd: File descriptor to print
  *
  * Return: On success numbers of bytes printed.
- * On error -1, and error is set appropriately.
+ * On error, -1 is returned, and errno is set appropriately.
  **/
 int print_to_fd(char *msg, int fd)
 {

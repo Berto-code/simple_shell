@@ -1,10 +1,9 @@
 #include "shell.h"
 
 /**
- * prompt - Prints the prompt
- * general_t: general info
+ * prompt - Print the prompt
  *
- * @info: Structure of general info
+ * @info: Struct of general information
  **/
 void prompt(general_t *info)
 {
@@ -15,7 +14,7 @@ void prompt(general_t *info)
 }
 
 /**
- * read_prompt - Read the lines in the prompt
+ * read_prompt - Read lines in the prompt
  *
  * Return: Buffer read or NULL if EOF was found
  **/
@@ -40,9 +39,8 @@ char *read_prompt()
 
 /**
  * start_prompt - Loop reading text
- * general_t - General info
  *
- * @info: Structure of general info
+ * @info: Struct of general information
  *
  * Return: Buffer read or NULL if EOF was found
  **/

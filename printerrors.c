@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *print_err - prints an error message to STDERR
+ *_printerror - prints an error message to STDERR
  *@msg: the mesage to print
  *Return: Number of printed bytes
  */

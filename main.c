@@ -1,11 +1,10 @@
-#include <shell.h>
-
+#include "shell.h"
 /**
  * main - Entry Point
  * @argc: number of arguments received
  * @argv: arguments received
  * Return: 0
- */
+ **/
 
 int main(int argc, char **argv)
 {
@@ -24,7 +23,7 @@ int main(int argc, char **argv)
 	info->n_commands = 0;
 	info->argc = argc;
 	info->argv = argv;
-	info->mode = isaty(STDIN) == INTERACTIVE;
+	info->mode = isatty(STDIN) == INTERACTIVE;
 	start(info);
 
 	status_code = info->status_code;

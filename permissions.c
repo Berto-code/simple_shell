@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * is_executable - Check if a filename has permissions
- * for running
+ * is_executable - Check if a filename have permissions
+ * for run
  *
  * @filename: Filename to check
  *
@@ -25,23 +25,23 @@ int is_executable(char *filename)
 }
 
 /**
- * is_file - Check if it's a file or binary
- * Description: Look for excute permissions and
+ * is_file - Check if is a file or binary
+ * Description: Lool for excute permissions and
  * if is a file
  *
  * @file: File to check
  *
- * Return: file with the correct permissions, PERMISSIONS
- * file but doesn't have permissions or doesn't exist, NON_PERMISSIONS
- * If it's not a file, NON_FILE
+ * Return: If is a file with the correct permissions, PERMISSIONS
+ * If is a file but not have permissions or doesn't exists, NON_PERMISSIONS
+ * If is not a file, NON_FILE
  **/
 int is_file(char *file)
 {
-	int g, size;
+	int i, size;
 
 	size = _strlen(file);
-	for (g = 0; g < size; g++)
-		if (file[g] == '/')
+	for (i = 0; i < size; i++)
+		if (file[i] == '/')
 			return (is_executable(file));
 
 	return (NON_FILE);

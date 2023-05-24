@@ -2,9 +2,9 @@
 
 /**
  * start - Handle the mode
- * Description: Mode can be either INTERACTIVE or NON_INTERACTIVE
+ * Description: Mode can be INTERACTIVE or NON_INTERACTIVE
  *
- * @info: Structure of info about the shell
+ * @info: Struct of information about the shell
  **/
 void start(general_t *info)
 {

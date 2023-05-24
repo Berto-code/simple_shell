@@ -2,13 +2,13 @@
 /**
  * message_selector - Select the message that match with the error_code
  *
- * @info: General info about the shell
+ * @info: General information about the shell
  *
  * Return: Error message
  **/
 char *message_selector(general_t info)
 {
-	int g, n_options;
+	int i, n_options;
 	error_t messages[] = {
 		{_ENOENT, _CODE_ENOENT},
 		{_EACCES, _CODE_EACCES},
@@ -17,9 +17,9 @@ char *message_selector(general_t info)
 	};
 
 	n_options = sizeof(messages) / sizeof(messages[0]);
-	for (g = 0; g < n_options; g++)
-		if (info.error_code == messages[g].code)
-			return (messages[g].message);
+	for (i = 0; i < n_options; i++)
+		if (info.error_code == messages[i].code)
+			return (messages[i].message);
 
 	return ("");
 }
@@ -27,7 +27,7 @@ char *message_selector(general_t info)
 /**
  * error - Print the error
  *
- * @info: General info about the shell
+ * @info: General information about the shell
  **/
 void error(general_t *info)
 {
@@ -58,10 +58,10 @@ void error(general_t *info)
 }
 
 /**
- * error_extra - Prints the error with extra info
+ * error_extra - Print the error with extra information
  *
- * @info: General info about the shell
- * @extra: Extra info
+ * @info: General information about the shell
+ * @extra: Extra information
  **/
 void error_extra(general_t *info, char *extra)
 {
