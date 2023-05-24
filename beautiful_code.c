@@ -26,4 +26,3 @@ void print_point(Point p)
 {
 	printf("Point coordinates: (%d, %d)\n", p.x, p.y);
 }
-
